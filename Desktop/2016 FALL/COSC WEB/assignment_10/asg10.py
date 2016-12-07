@@ -22,25 +22,25 @@ def main():
     print("<h3>Credit Hours</h3>\n")
     cgitb.enable()
     form=cgi.FieldStorage()
-    if form:
+    if (form):
         name=''
         hours=''
         name=form.getfirst('name', '')
         hours=form.getfirst('hours', '')
-        if hours == '' or name == '':
+        if (hours == '' or name == ''):
             print("<h3> You must enter data for both values</h3>\n")
             generate_Form(name,hours)
         else:
             try:
                 hours=int(hours)
                 print("Your hours: ", str(hours), "<br/>\n")
-                if hours < 29:
+                if (hours < 29):
                     print("Hi" + name + "You're a freshman")
-                elif hours > 30 or hours < 59:
+                elif (hours > 30 or hours < 59):
                     print("Hi" + name + "You're a sophomore")
-                elif hours > 60 or hours < 89:
+                elif (hours > 60 or hours < 89):
                     print("Hi" + name + "You're a junior")
-                elif hours >= 90:
+                elif (hours >= 90):
                     print("Hi" + name + "You're a sophomore")
             except:
                 hours=''
@@ -54,4 +54,3 @@ def main():
 
 # here we call the main function
 main()
-
