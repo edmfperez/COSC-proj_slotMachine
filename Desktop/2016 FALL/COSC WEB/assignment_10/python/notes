@@ -1,6 +1,0 @@
-1. all scripts on web
-2. have to be executable
-3. all scripts end in .cgi
-    3.1 "755"
-4. all modules end in .py
-5. put all scripts in directory "/cgi_bin"
